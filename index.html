@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Caesar Cipher Tool</title>
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <div id="heading-container">
+            <h1>Caesar Cipher Tool</h1>
+            <p>Developed by ZCAS Group 1</p>
+        </div>
+        <div id="main-container">
+            <div class="box">
+                <div class="heading">
+                    <h2>Controls</h2>
+                </div>
+                <form id="controls">
+                    <div class="row">
+                        <div>
+                            <input type="radio" name="code" id="encode" value="encode" checked="checked" />
+                            <label for="encode">Encode</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="code" id="decode" value="decode" />
+                            <label for="decode">Decode</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <span>Shift Key:</span>
+                            <input type="text" name="shift" id="shift-input" maxlength="4" value="3" />
+                        </div>
+                        <div>
+                            <span>Modulo:</span>
+                            <input type="text" name="mod" id="mod-input" maxlength="4" value="36" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <span>Alphabet:</span>
+                            <input type="text" name="alphabet" id="alphabet-input"
+                                value="abcdefghijklmnopqrstuvwxyz0123456789" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div>
+                            <div>Letter Case:</div>
+                            <select name="letter-case" id="letter-case">
+                                <option value="1">Maintain Case</option>
+                                <option value="2">Lower Case</option>
+                                <option value="3">Upper Case</option>
+                            </select>
+                        </div>
+                        <div>
+                            <div>Foreign Characters:</div>
+                            <select name="foreign-chars" id="foreign-chars">
+                                <option value="1">Remove</option>
+                                <option value="2">Ignore</option>
+                            </select>
+                        </div>
+                    </div>
+                    <input type="submit" name="submit" id="submit" value="Process" />
+                </form>
+            </div>
+            <div class="box">
+                <div class="heading">
+                    <h2 id="heading-input">Plaintext</h2>
+                </div>
+                <textarea placeholder="Enter plaintext here..." id="input-text"></textarea>
+            </div>
+            <div class="box">
+                <div class="heading">
+                    <h2 id="heading-output">Ciphertext</h2>
+                </div>
+                <textarea readonly placeholder="Output will appear here..." id="output-text"></textarea>
+            </div>
+        </div>
+    </div>
+    <script src="caesar.js"></script>
+</body>
+
+</html>
